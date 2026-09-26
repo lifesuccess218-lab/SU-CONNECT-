@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SU Connect - University of Sindh Student Hub</title>
-    <meta name="description" content="SU Connect - The ultimate A to Z student hub for University of Sindh. Connect, learn, and grow.">
+    <title>SU Connect - University of Sindh Student App</title>
+    <meta name="description" content="SU Connect - The ultimate app for University of Sindh students. Notes, Past Papers, Events, and more.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,8 @@
     <style>
         /* ================= CSS VARIABLES ================= */
         :root {
-            --primary-blue: #0b2b5c;   /* Logo ka dark blue */
-            --primary-green: #0e5e3a;  /* Logo ka dark green */
+            --primary-blue: #0b2b5c;
+            --primary-green: #0e5e3a;
             --bg-light: #f8f9fa;
             --text-dark: #1a1a1a;
             --text-light: #555555;
@@ -56,7 +56,7 @@
             padding: 0 20px;
         }
 
-        /* ================= HEADER / NAVBAR ================= */
+        /* ================= HEADER ================= */
         header {
             background-color: var(--white);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -78,10 +78,11 @@
             gap: 12px;
         }
 
+        /* YAHAN LOGO.PNG LAGAYA HAI */
         .logo-container img {
             height: 55px;
             width: auto;
-            border-radius: 50%; /* Logo circle shape */
+            border-radius: 50%;
             border: 2px solid var(--primary-blue);
         }
 
@@ -114,20 +115,6 @@
 
         .nav-links a:hover {
             color: var(--primary-blue);
-        }
-
-        .btn-login {
-            background-color: var(--primary-blue);
-            color: var(--white) !important;
-            padding: 10px 25px;
-            border-radius: 50px;
-            transition: var(--transition);
-        }
-
-        .btn-login:hover {
-            background-color: var(--primary-green);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(14, 94, 58, 0.3);
         }
 
         /* ================= HERO SECTION ================= */
@@ -165,46 +152,26 @@
             max-width: 500px;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
+        /* App Details Box */
+        .app-details {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-green);
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 15px 35px;
-            border-radius: 8px;
-            font-weight: 600;
+        .app-details p {
             font-size: 1rem;
-            transition: var(--transition);
-            display: inline-block;
-            border: none;
-            cursor: pointer;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-weight: 500;
         }
 
-        .btn-primary:hover {
-            background-color: #071f42;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(11, 43, 92, 0.2);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-green);
-            padding: 15px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            border: 2px solid var(--primary-green);
-            transition: var(--transition);
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-green);
-            color: var(--white);
-            transform: translateY(-3px);
+        .app-details p i {
+            color: var(--primary-blue);
+            margin-right: 8px;
         }
 
         .hero-image {
@@ -213,6 +180,7 @@
             position: relative;
         }
 
+        /* YAHAN FOUNDER.PNG LAGAYA HAI */
         .hero-image img {
             width: 100%;
             max-width: 450px;
@@ -222,8 +190,7 @@
             object-fit: cover;
         }
 
-        /* Floating Badge */
-        .hero-badge {
+        .founder-badge {
             position: absolute;
             bottom: -20px;
             left: -20px;
@@ -237,19 +204,19 @@
             border-left: 5px solid var(--primary-green);
         }
 
-        .hero-badge i {
+        .founder-badge i {
             color: var(--primary-green);
             font-size: 1.5rem;
         }
 
-        .hero-badge p {
+        .founder-badge p {
             font-size: 0.9rem;
             font-weight: 700;
             color: var(--primary-blue);
             margin: 0;
         }
 
-        /* ================= FEATURES SECTION ================= */
+        /* ================= FEATURES SECTION (A TO Z) ================= */
         .features {
             padding: 80px 0;
             background-color: var(--white);
@@ -379,7 +346,7 @@
             color: #b0c4de;
         }
 
-        /* ================= RESPONSIVE DESIGN ================= */
+        /* ================= RESPONSIVE ================= */
         @media (max-width: 992px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -388,15 +355,15 @@
             .hero-text p {
                 margin: 0 auto 35px;
             }
-            .hero-buttons {
-                justify-content: center;
-            }
             .hero-image img {
                 max-width: 350px;
             }
-            .hero-badge {
+            .founder-badge {
                 bottom: -10px;
                 left: 10px;
+            }
+            .app-details {
+                text-align: left;
             }
         }
 
@@ -429,8 +396,8 @@
     <header>
         <div class="container navbar">
             <div class="logo-container">
-                <!-- YAHAN APNA LOGO LAGAYEIN -->
-                <img src="assets/logo.png" alt="SU Connect Logo">
+                <!-- GITHUB PAR JO LOGO.PNG HAI USKA NAAM YAHAN LIKHEIN -->
+                <img src="logo.png" alt="SU Connect Logo">
                 <div class="logo-text">
                     <h1>SU Connect</h1>
                     <span>University of Sindh Student Hub</span>
@@ -440,9 +407,8 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About App</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="btn-login">Login / Sign Up</a></li>
                 </ul>
             </nav>
         </div>
@@ -452,22 +418,29 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <div class="hero-text">
-                <h2>Your Ultimate <span>A to Z</span> Student Hub</h2>
-                <p>
-                    Welcome to SU Connect. The official digital companion for University of Sindh students. 
-                    Access notes, past papers, events, societies, and connect with fellow students — all in one place.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
-                    <a href="#features" class="btn-secondary">Explore Features</a>
+                <h2>Welcome to <span>SU Connect</span></h2>
+                
+                <!-- APP KI DETAILS YAHAN HAIN -->
+                <div class="app-details">
+                    <p><i class="fas fa-mobile-alt"></i> <strong>App Name:</strong> SU Connect</p>
+                    <p><i class="fas fa-university"></i> <strong>For:</strong> University of Sindh Students</p>
+                    <p><i class="fas fa-star"></i> <strong>Purpose:</strong> A to Z Student Hub</p>
                 </div>
+
+                <p>
+                    SU Connect ek complete mobile application hai jo University of Sindh ke students ke liye banai gayi hai. 
+                    Is app mein aapko har woh cheez milegi jo ek student ko university life mein chahiye.
+                </p>
+                
+                <!-- YAHAN KOI LOGIN/SIGNUP BUTTON NAHI HAI -->
+                <a href="#features" class="btn-primary" style="display:inline-block; background-color: var(--primary-blue); color: white; padding: 15px 35px; border-radius: 8px; font-weight: 600; transition: var(--transition);">Explore App Features <i class="fas fa-arrow-down"></i></a>
             </div>
             <div class="hero-image">
-                <!-- YAHAN FOUNDER KI IMAGE LAGAYEIN -->
-                <img src="assets/founder.jpg" alt="Founder of SU Connect">
-                <div class="hero-badge">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Built by Students,<br>For Students</p>
+                <!-- GITHUB PAR JO FOUNDER.PNG HAI USKA NAAM YAHAN LIKHEIN -->
+                <img src="founder.png" alt="Founder of SU Connect">
+                <div class="founder-badge">
+                    <i class="fas fa-user-tie"></i>
+                    <p>Meet the Founder<br><span style="font-size: 0.8rem; color: var(--primary-green);">SU Connect</span></p>
                 </div>
             </div>
         </div>
@@ -477,35 +450,59 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h3>Everything You Need, In One App</h3>
-                <p>SU Connect is designed to make your university life easier and more productive.</p>
+                <h3>App Ke Andar Kya Kya Hai? (A to Z)</h3>
+                <p>SU Connect app mein University of Sindh ke students ke liye yeh sab features available hain.</p>
             </div>
             <div class="features-grid">
                 <!-- Feature 1 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-book-open"></i></div>
-                    <h4>Study Material</h4>
-                    <p>Access notes, past papers, and syllabus for all departments instantly.</p>
+                    <h4>Study Notes</h4>
+                    <p>Har department ke notes, handouts aur syllabus app mein available hain.</p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <h4>Student Community</h4>
-                    <p>Connect with seniors, juniors, and peers across the university.</p>
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <h4>Past Papers</h4>
+                    <p>Exams ki tayari ke liye saaloon ke past papers aur guess papers.</p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
                     <h4>Events & Societies</h4>
-                    <p>Stay updated with all the latest events, seminars, and society activities.</p>
+                    <p>University ke tamam events, seminars aur society activities ki updates.</p>
                 </div>
                 <!-- Feature 4 -->
                 <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Announcements</h4>
+                    <p>University ke official notices aur announcements sabse pehle app par.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
-                    <h4>Career & Jobs</h4>
-                    <p>Find internships, part-time jobs, and career guidance tailored for you.</p>
+                    <h4>Jobs & Internships</h4>
+                    <p>Students ke liye part-time jobs, internships aur career opportunities.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h4>Student Community</h4>
+                    <p>Seniors, juniors aur peers se connect karne ka platform.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT APP SECTION ================= -->
+    <section style="padding: 80px 0; background-color: var(--bg-light);" id="about">
+        <div class="container" style="text-align: center;">
+            <h3 style="font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 20px;">About SU Connect App</h3>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem;">
+                SU Connect ek digital platform hai jo University of Sindh ke students ki daily problems ko solve karne ke liye design kiya gaya hai. 
+                Chahe aapko notes chahiye, past papers chahiye, ya university ki koi news chahiye — SU Connect app aapki sabse pehli zaroorat banega. 
+                Yeh app students ke liye, students ke haath se banaya gaya hai.
+            </p>
         </div>
     </section>
 
@@ -513,15 +510,15 @@
     <footer id="contact">
         <div class="container footer-content">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="SU Connect Logo">
-                <p>SU Connect is the official student hub for University of Sindh, bridging the gap between students and resources.</p>
+                <img src="logo.png" alt="SU Connect Logo">
+                <p>SU Connect is the official student app for University of Sindh, bridging the gap between students and resources.</p>
             </div>
             <div class="footer-links">
                 <h5>Quick Links</h5>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#about">About App</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
@@ -541,4 +538,4 @@
     </footer>
 
 </body>
-                      </html>
+</html>
